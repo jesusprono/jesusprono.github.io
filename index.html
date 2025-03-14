@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Galaxy 9K</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet">
+<style type="text/css" id="dcoder_stylesheet">body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background: black;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/3jLPB46.gif') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+header, section, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animation-3d img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00ffea;
+}
+
+.promo-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.promo-details li {
+    margin: 10px 0;
+}
+
+.cta {
+    background: linear-gradient(45deg, #00ffea, #9c27b0);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+}
+
+.testimonial {
+    background: rgba(0,0,0,0.6);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.countdown {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+footer {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+    .promo {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+</style></head>
+<body>
+    <div class="background"></div>
+
+    <header>
+        <h1>🚀 Bonus Galaxy 9K 🚀</h1>
+        <p>Plonge dans l'univers des bonus futuristes avec <strong>BONUS9K</strong> et <strong>LYLOSWIN</strong>.</p>
+    </header>
+
+    <section class="promo">
+        <div class="animation-3d">
+            <img src="https://i.imgur.com/5w2vL4a.gif" alt="Animation futuriste">
+        </div>
+        <div class="promo-details">
+            <h2>🔥 BONUS9K 🔥</h2>
+            <ul>
+                <li>🎁 9000 cadeaux sur ton compte !</li>
+                <li>💸 Premier pari remboursé !</li>
+                <li>📅 Cashback spécial chaque lundi et vendredi !</li>
+                <li>🛡️ Couverture quasi totale des pertes !</li>
+                <li>✨ Bonus réguliers et exclusifs !</li>
+            </ul>
+            <button class="cta">Active ton bonus maintenant !</button>
+        </div>
+    </section>
+
+    <section class="how-to">
+        <h2>🤖 Comment ça marche ?</h2>
+        <ol>
+            <li>Inscris-toi sur notre plateforme partenaire.</li>
+            <li>Entre le code promo <strong>BONUS9K</strong> ou <strong>LYLOSWIN</strong>.</li>
+            <li>Profite immédiatement de tes avantages exclusifs !</li>
+        </ol>
+    </section>
+
+    <section class="testimonials">
+        <h2>💬 Témoignages</h2>
+        <div class="testimonial">
+            <p>"J'ai gagné gros grâce à BONUS9K, c'est juste incroyable !"</p>
+            <span>- Alex, Paris</span>
+        </div>
+        <div class="testimonial">
+            <p>"LYLOSWIN m'a permis de récupérer presque toutes mes pertes, je recommande vivement !"</p>
+            <span>- Sam, Lyon</span>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <h2>⏳ Prochain Cashback dans :</h2>
+        <div id="timer"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 BonusGalaxy9K.com - Tous droits réservés.</p>
+    </footer>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="https://example.com/futuristic-music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+
+<script type="text/javascript" id="dcoder_script">// Compte à rebours interactif
+function updateCountdown() {
+    const timerElement = document.getElementById('timer');
+    const now = new Date();
+    const nextCashback = new Date();
+
+    // Cashback chaque lundi et vendredi à 18h
+    const day = now.getDay();
+    let daysToAdd = (day <= 1) ? (1 - day) : (day <= 5) ? (5 - day) : (8 - day);
+    nextCashback.setDate(now.getDate() + daysToAdd);
+    nextCashback.setHours(18, 0, 0, 0);
+
+    const diff = nextCashback - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    timerElement.innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+
+    setTimeout(updateCountdown, 1000);
+}
+
+updateCountdown();
+
+// Bouton CTA interactif
+document.querySelector('.cta').addEventListener('click', () => {
+    alert('Code activé avec succès ! Profite de tes bonus futuristes dès maintenant !');
+});
+
+// Musique d'ambiance volume modéré
+const audio = document.getElementById('bg-music');
+audio.volume = 0.2;
+</script></body></html>
