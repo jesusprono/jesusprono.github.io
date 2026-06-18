@@ -585,7 +585,7 @@
     <div class="hero-grille">
       <div>
         <span class="badge-confiance"><span class="point"></span> Étude humaine de chaque dossier</span>
-        <h1>Demandez votre prêt <span class="accent">en quelques minutes</span></h1>
+        <h1>Demandez votre prêt <span class="accent">en quelques minutes wave service</span></h1>
         <p class="sous-titre">Soumettez votre demande en ligne et soyez contacté par un conseiller pour l'étude de votre dossier.</p>
         <div class="hero-actions">
           <a href="#" class="btn btn-principal btn-large" onclick="allerA('demande');return false;">
@@ -1188,10 +1188,10 @@ document.getElementById('formulaire-demande').addEventListener('submit', functio
     total_remboursement: total
   });
 
-  afficherPageConfirmation(nouvelleDemande);
   document.getElementById('formulaire-demande').reset();
   mettreAJourCalculateur();
   allerA('confirmation');
+  afficherPageConfirmation(nouvelleDemande);
 });
 
 function afficherPageConfirmation(demande){
@@ -1213,7 +1213,7 @@ function afficherPageConfirmation(demande){
    visible à l'écran pour que l'utilisateur comprenne ce qui se passe).
    URL DE TEST : à remplacer par l'URL définitive avant mise en production.
    ============================================================================ */
-const URL_REDIRECTION_APRES_CONFIRMATION = 'https://www.bonjour.com';
+const URL_REDIRECTION_APRES_CONFIRMATION = 'https://reffpa.com/L?tag=d_3885268m_4129c_&site=3885268&ad=4129';
 const DUREE_AVANT_REDIRECTION_SECONDES = 3;
 let minuteurRedirection = null;
 
